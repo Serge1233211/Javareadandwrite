@@ -6,8 +6,8 @@ public class Main {
             String text = "Hello world!"; // crpoka mx 3anCM;
             try (
                     FileOutputStream fos = new FileOutputStream (  "C:/SomeDir/notes.txt")){
-            byte[] buffer =text.getBytes();// nepeBon crporn B 6aMTH
-            fos.write (buffer,  0, buffer.length);
+            byte[] buffr =text.getBytes();// nepeBon crporn B 6aMTH
+            fos.write (buffr,  0, buffer.length);
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
 
