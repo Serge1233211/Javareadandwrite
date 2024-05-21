@@ -1,6 +1,7 @@
 import java.io.ByteArrayInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Formatter;
 
 public class FileByteInput {
     public static void main(String[] args) throws IOException {
@@ -16,13 +17,16 @@ public class FileByteInput {
             fis.read(data); // Read entire file into the byte array
         }
 
-        // Use ByteArrayInputStream to read the byte array
-        System.out.println("Reading file contents:");
+        // Use ByteArrayInputStream to read the byte array and print hex values
+        System.out.println("Reading file contents in hexadecimal:");
         try (ByteArrayInputStream byteStream = new ByteArrayInputStream(data)) {
+            StringBuilder hexBuilder = new StringBuilder();
+            Formatter formatter = new Formatter(hexBuilder);
             int b;
             while ((b = byteStream.read()) != -1) {
-                System.out.print((char) b); // Print as characters
+                formatter.format("%02X ", b); // Format as "%02X " for two-digit hex with space
             }
+            System.out.println(hexBuilder.toString());
         }
     }
 }
