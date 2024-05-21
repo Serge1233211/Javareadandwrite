@@ -6,7 +6,7 @@ public class FileByteInput {
     public static void main(String[] args) throws IOException {
 
         // Replace "path/to/your/file.txt" with the actual path to your file
-        String filePath = "path/to/your/file.txt";
+        String filePath = "C:/Users/sknat/OneDrive/Documents/Assembly/test.obj";
 
         // Read file into a byte array
         byte[] data;
